@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nissa.id</title>
+<link rel="icon" type="image/svg" href="logo.svg">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+body{font-family:"Poppins", sans-serif;background:#0f0f0f;color:#f1f1f1;}
+
+/* NAVBAR */
+nav{
+position:fixed;width:100%;top:0;backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.9);padding:15px 60px;
+display:flex;justify-content:space-between;align-items:center;
+z-index:10;border-bottom:1px solid rgba(0,255,120,0.2);
+}
+.logo svg{width:40px;height:40px;}
+nav ul{list-style:none;display:flex;gap:35px;}
+nav ul li a{color:#f1f1f1;font-size:15px;text-decoration:none;transition:0.3s;}
+nav ul li a:hover{color:#ffffff;transform:translateY(-2px);}
+
+/* HOME */
+#home{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+#home h1 {
+  font-size:55px;
+  background: linear-gradient(120deg,#fff,#4f5150,#fff);
+  -webkit-background-clip: text;
+  background-clip: text; 
+  color: transparent;
+}
+.animated-text{font-size:18px;font-weight:500;margin-top:10px;animation: floatText 2s ease-in-out infinite alternate;color:#ffffffcc;}
+@keyframes floatText{from{transform:translateY(5px);opacity:0.7;}to{transform:translateY(-5px);opacity:1;}}
+.btn{margin-top:30px;padding:14px 28px;border-radius:25px;background:linear-gradient(45deg,#ffffff,#ffffff);border:none;cursor:pointer;color:black;font-weight:bold;}
+
+/* SECTION */
+section{padding:120px 70px;}
+.section-title{font-size:32px;font-weight:700;margin-bottom:40px;text-align:center;color:#ffffff;}
+
+/* ABOUT */
+.about-box{display:flex;gap:50px;align-items:center;justify-content:center;flex-wrap:wrap;}
+.about-img{width:260px;height:260px;border-radius:20px;object-fit:cover;border:3px solid #ffffff;}
+
+/* SKILLS */
+.skill-container{max-width:700px;margin:auto;}
+.skill-item{margin-bottom:25px;}
+.skill-label{display:flex;justify-content:space-between;margin-bottom:8px;}
+.progress{width:100%;height:13px;background:#1f1f1f;border-radius:20px;overflow:hidden;}
+.bar{height:100%;background:linear-gradient(90deg,#6d6b6b,#555454);}
+
+/* ACTIVITY & CERTIFICATION CARDS */
+.activity-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px;}
+.activity-card{background:#1a1a1a;padding:20px;border-radius:18px;border:1px solid rgba(0,255,120,0.2);text-align:center;cursor:pointer;transition:0.3s;color:#f1f1f1;}
+.activity-card:hover{transform:translateY(-5px);border:1px solid #ffffff;}
+
+/* POPUP */
+.popup{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:none;justify-content:center;align-items:center;z-index:999;}
+.popup-content{background:#1a1a1a;padding:20px;border-radius:15px;max-width:400px;width:90%;text-align:center;position:relative;animation:scaleIn 0.3s ease;border:1px solid #ffffff;}
+.popup-content img{width:100%;border-radius:10px;margin-top:10px;}
+.popup-content h3{color:#ffffff;}
+.close-btn{position:absolute;top:10px;right:15px;font-size:22px;cursor:pointer;color:#ffffff;}
+@keyframes scaleIn{from{transform:scale(0.8);}to{transform:scale(1);}}
+
+/* CONTACT FORM */
+#contactForm input,#contactForm textarea{width:100%;padding:12px;border-radius:8px;border:none;margin-bottom:15px;}
+#contactForm button{width:100%;}
+
+/* SOSIAL MEDIA */
+.sosmed-icons {
+    text-align:center;
+    margin-top:20px;
+}
+.sosmed-icons a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+.sosmed-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer{padding:25px;background:#000;text-align:center;color:#05eeff;}
+
+/* RESPONSIVE */
+@media(max-width:768px){nav{padding:15px 30px;}#home h1{font-size:40px;}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">
+  <img src="logo1.svg" alt="Logo Nisa" style="width:40px; height:40px;">
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#certification">Certification</a></li>
+<li><a href="#activity">Activity</a></li>
+<li><a href="#sosmed">Sosmed</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section id="home">
+<h1>Welcome to My Web</h1>
+<p class="animated-text">I am a Prospective Network Engineer</p>
+<a href="#about" class="btn">See more!</a>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<div class="about-box">
+<img src="profile.png" class="about-img">
+<div>Hello everyone, let me introduce myself, I am Nisa. I'm a child who dreams of becoming an IT professional, passionate about learning technology and various software. I've been interested in computers since childhood and curious about how the digital world works.
+My desire to learn and develop in IT is a major driving force in my future career.</div>
+</div>
+</section>
+
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+<div class="skill-container">
+<div class="skill-item">
+<div class="skill-label"><span>Mikrotik</span><span>80%</span></div>
+<div class="progress"><div class="bar" style="width:80%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-label"><span>Cisco</span><span>80%</span></div>
+<div class="progress"><div class="bar" style="width:80%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-label"><span>Ms.Office</span><span>70%</span></div>
+<div class="progress"><div class="bar" style="width:70%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-label"><span>CorelDraw</span><span>75%</span></div>
+<div class="progress"><div class="bar" style="width:75%;"></div></div>
+</div>
+</div>
+</section>
+
+<section id="certification">
+<h2 class="section-title">Certification</h2>
+<div class="activity-grid">
+  <div class="activity-card" data-img="certi1.jpg" data-title="Mikrotik career">🎓 Mikrotik</div>
+  <div class="activity-card" data-img="certi2.jpg" data-title="Cisco career">🌐 Cisco</div>
+  <div class="activity-card" data-img="certi3.jpg" data-title="Internet of Things">💻 IoT</div>
+  <div class="activity-card" data-img="certi4.jpg" data-title="Pelatihan Intensif Jaringan">📡 Pelatihan Jaringan</div>
+</div>
+</section>
+
+<section id="activity">
+<h2 class="section-title">Activity</h2>
+<div class="activity-grid">
+<div class="activity-card" data-img="act1.jpg" data-title="Configuration & Troubleshooting">🔧 Configuration & Troubleshooting</div>
+<div class="activity-card" data-img="act2.jpg" data-title="Router & Mikrotik Installation">📡 Router & Mikrotik Installation</div>
+<div class="activity-card" data-img="act3.jpg" data-title="Webinar & Bootcamp">💻 Webinar & Bootcamp</div>
+<div class="activity-card" data-img="act4.jpg" data-title="Draw Network Topology">🎨 Draw Network Topology</div>
+</div>
+</section>
+
+<section id="sosmed">
+<h2 class="section-title">Sosial Media</h2>
+<div class="sosmed-icons">
+<a href="https://www.linkedin.com/in/khaerun-nisa-ns07" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn"></a>
+<a href="https://www.instagram.com/nissarn._" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
+<a href="https://www.tiktok.com/@nissarn_" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
+<a href="https://discord.com/users/nissatech7" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord"></a>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Send Message Me</h2>
+<div style="max-width:600px;margin:auto;">
+<form id="contactForm">
+<input type="text" id="name" name="name" placeholder="Your Name" required>
+<input type="email" id="email" name="email" placeholder="Your Email" required>
+<textarea id="message" name="message" placeholder="Your Message" required></textarea>
+<button type="submit" class="btn">Send</button>
+</form>
+</div>
+</section>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+<div class="popup-content">
+<span class="close-btn">&times;</span>
+<h3 id="popupTitle"></h3>
+<img id="popupImg">
+</div>
+</div>
+
+<footer>Thank you for visiting my portfolio.</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+   emailjs.init("7vUN4w-ItpKC0rcyv"); 
+   const contactForm = document.getElementById("contactForm");
+
+   if(contactForm){
+       const btnSubmit = contactForm.querySelector("button");
+       contactForm.addEventListener("submit", function(e){
+           e.preventDefault();
+           const name = document.getElementById("name").value.trim();
+           const email = document.getElementById("email").value.trim();
+           const message = document.getElementById("message").value.trim();
+           if(!name || !email || !message){alert("Semua field harus diisi!");return;}
+           const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+           if(!emailRegex.test(email)){alert("Email tidak valid!");return;}
+           btnSubmit.textContent="Sending...";btnSubmit.disabled=true;
+           emailjs.sendForm("service_873#45","template_hs7uib4",this)
+           .then(()=>{alert("Pesan berhasil dikirim!");contactForm.reset();})
+           .catch((err)=>{alert("Gagal mengirim email!");console.log(err);})
+           .finally(()=>{btnSubmit.textContent="Send";btnSubmit.disabled=false;});
+       });
+   }
+
+   // Popup for Activity & Certification
+   const popup=document.getElementById("popup");
+   const popupImg=document.getElementById("popupImg");
+   const popupTitle=document.getElementById("popupTitle");
+   const closeBtn=document.querySelector(".close-btn");
+   document.querySelectorAll(".activity-card").forEach(card=>{
+       card.addEventListener("click", ()=>{
+           if(card.dataset.img){
+               popupImg.src=card.getAttribute("data-img");
+               popupTitle.textContent=card.getAttribute("data-title");
+               popup.style.display="flex";
+           }
+       });
+   });
+   closeBtn.addEventListener("click", ()=>{popup.style.display="none";});
+   popup.addEventListener("click",(e)=>{if(e.target===popup){popup.style.display="none";}});
+});
+</script>
+
+</body>
+</html>
