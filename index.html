@@ -66,6 +66,13 @@ section{padding:120px 70px;}
 /* CONTACT FORM */
 #contactForm input,#contactForm textarea{width:100%;padding:12px;border-radius:8px;border:none;margin-bottom:15px;}
 #contactForm button{width:100%;}
+/* Ubah warna garis saat input diklik */
+#contactForm input:focus,
+#contactForm textarea:focus{
+    outline:none;
+    border:2px solid #444444;   /* ganti warna di sini */
+    box-shadow:none;
+}
 
 /* SOSIAL MEDIA */
 .sosmed-icons {
@@ -98,9 +105,11 @@ footer{padding:25px;background:#443a3a;text-align:center;color:#ffffff;}
 
 @media(max-width:1024px){
 .hamburger{display:flex;}
-nav ul{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:rgb(90, 83, 83);flex-direction:column;justify-content:center;align-items:center;gap:25px;transition:0.4s ease;border-left:1px solid #000;box-shadow:-5px 0 15px rgba(0,0,0,0.3);}
+nav ul{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:rgb(90, 83, 83);flex-direction:column;justify-content:flex-start;padding-top:60px;gap:20px;transition:0.4s ease;border-left:1px solid #000;box-shadow:-5px 0 15px rgba(0,0,0,0.3);}
 nav ul.active{right:0;}
 nav ul li a{font-size:18px;}
+.mobile-logo{display:block;margin-top:auto;padding-bottom:30px;text-align:center;}
+.mobile-logo img{width:60px;height:60px;}
 }
 </style>
 </head>
@@ -118,13 +127,13 @@ nav ul li a{font-size:18px;}
 </div>
 
 <ul id="navMenu">
-<li><a href="#home" onclick="closeMenu()">Home</a></li>
-<li><a href="#about" onclick="closeMenu()">About</a></li>
-<li><a href="#skills" onclick="closeMenu()">Skills</a></li>
-<li><a href="#certification" onclick="closeMenu()">Certification</a></li>
-<li><a href="#activity" onclick="closeMenu()">Activity</a></li>
-<li><a href="#sosmed" onclick="closeMenu()">Sosmed</a></li>
-<li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+<li><a href="#home" onclick="closeMenu()"><span class="menu-icon">🏠</span> Home</a></li>
+<li><a href="#about" onclick="closeMenu()"><span class="menu-icon">👤</span> About</a></li>
+<li><a href="#skills" onclick="closeMenu()"><span class="menu-icon">💡</span> Skills</a></li>
+<li><a href="#certification" onclick="closeMenu()"><span class="menu-icon">📜</span> Certification</a></li>
+<li><a href="#activity" onclick="closeMenu()"><span class="menu-icon">🎯</span> Activity</a></li>
+<li><a href="#sosmed" onclick="closeMenu()"><span class="menu-icon">📱</span> Sosmed</a></li>
+<li><a href="#contact" onclick="closeMenu()"><span class="menu-icon">✉️</span> Contact</a></li>
 </ul>
 </nav>
 
