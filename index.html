@@ -8,59 +8,59 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-body{font-family:"Poppins", sans-serif;background:#0f0f0f;color:#f1f1f1;}
+body{font-family:"Poppins", sans-serif;background:#bdbdbd;color:#333333;}
 
 /* NAVBAR */
 nav{
 position:fixed;width:100%;top:0;backdrop-filter:blur(10px);
-background:rgba(0,0,0,0.9);padding:15px 60px;
+background:rgb(90, 83, 83);padding:15px 60px;
 display:flex;justify-content:space-between;align-items:center;
-z-index:10;border-bottom:1px solid rgba(0,255,120,0.2);
+z-index:10;border-bottom:1px solid rgb(0, 0, 0);
 }
 .logo svg{width:40px;height:40px;}
 nav ul{list-style:none;display:flex;gap:35px;}
-nav ul li a{color:#f1f1f1;font-size:15px;text-decoration:none;transition:0.3s;}
+nav ul li a{color:#ffffff;font-size:15px;text-decoration:none;transition:0.3s;}
 nav ul li a:hover{color:#ffffff;transform:translateY(-2px);}
 
 /* HOME */
 #home{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
 #home h1 {
   font-size:55px;
-  background: linear-gradient(120deg,#fff,#4f5150,#fff);
+  background: linear-gradient(120deg,#000000,#333333,#1b1b1b);
   -webkit-background-clip: text;
   background-clip: text; 
   color: transparent;
 }
-.animated-text{font-size:18px;font-weight:500;margin-top:10px;animation: floatText 2s ease-in-out infinite alternate;color:#ffffffcc;}
+.animated-text{font-size:18px;font-weight:500;margin-top:10px;animation: floatText 2s ease-in-out infinite alternate;color:#333333;}
 @keyframes floatText{from{transform:translateY(5px);opacity:0.7;}to{transform:translateY(-5px);opacity:1;}}
-.btn{margin-top:30px;padding:14px 28px;border-radius:25px;background:linear-gradient(45deg,#ffffff,#ffffff);border:none;cursor:pointer;color:black;font-weight:bold;}
+.btn{margin-top:30px;padding:14px 28px;border-radius:25px;background:linear-gradient(45deg,#00000033,#00000033);border:none;cursor:pointer;color:rgb(90, 83, 83);font-weight:bold;}
 
 /* SECTION */
 section{padding:120px 70px;}
-.section-title{font-size:32px;font-weight:700;margin-bottom:40px;text-align:center;color:#ffffff;}
+.section-title{font-size:32px;font-weight:700;margin-bottom:40px;text-align:center;color:#333333;}
 
 /* ABOUT */
 .about-box{display:flex;gap:50px;align-items:center;justify-content:center;flex-wrap:wrap;}
-.about-img{width:260px;height:260px;border-radius:20px;object-fit:cover;border:3px solid #ffffff;}
+.about-img{width:260px;height:260px;border-radius:20px;object-fit:cover;border:3px solid #333333;}
 
 /* SKILLS */
 .skill-container{max-width:700px;margin:auto;}
 .skill-item{margin-bottom:25px;}
 .skill-label{display:flex;justify-content:space-between;margin-bottom:8px;}
-.progress{width:100%;height:13px;background:#1f1f1f;border-radius:20px;overflow:hidden;}
-.bar{height:100%;background:linear-gradient(90deg,#6d6b6b,#555454);}
+.progress{width:100%;height:13px;background:#8a8a8a;border-radius:20px;overflow:hidden;}
+.bar{height:100%;background:linear-gradient(90deg,#1e1d1d,#363535);}
 
 /* ACTIVITY & CERTIFICATION CARDS */
 .activity-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px;}
-.activity-card{background:#1a1a1a;padding:20px;border-radius:18px;border:1px solid rgba(0,255,120,0.2);text-align:center;cursor:pointer;transition:0.3s;color:#f1f1f1;}
+.activity-card{background:#515151;padding:20px;border-radius:18px;border:1px solid rgba(22, 22, 22, 0.914);text-align:center;cursor:pointer;transition:0.3s;color:#f1f1f1;}
 .activity-card:hover{transform:translateY(-5px);border:1px solid #ffffff;}
 
 /* POPUP */
-.popup{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:none;justify-content:center;align-items:center;z-index:999;}
-.popup-content{background:#1a1a1a;padding:20px;border-radius:15px;max-width:400px;width:90%;text-align:center;position:relative;animation:scaleIn 0.3s ease;border:1px solid #ffffff;}
+.popup{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.8);display:none;justify-content:center;align-items:center;z-index:999;}
+.popup-content{background:#000000;padding:20px;border-radius:15px;max-width:400px;width:90%;text-align:center;position:relative;animation:scaleIn 0.3s ease;border:1px solid #ffffff;}
 .popup-content img{width:100%;border-radius:10px;margin-top:10px;}
 .popup-content h3{color:#ffffff;}
-.close-btn{position:absolute;top:10px;right:15px;font-size:22px;cursor:pointer;color:#ffffff;}
+.close-btn{position:absolute;top:10px;right:15px;font-size:22px;cursor:pointer;color:#fdfdfd;}
 @keyframes scaleIn{from{transform:scale(0.8);}to{transform:scale(1);}}
 
 /* CONTACT FORM */
@@ -83,10 +83,25 @@ section{padding:120px 70px;}
 }
 
 /* FOOTER */
-footer{padding:25px;background:#000;text-align:center;color:#05eeff;}
+footer{padding:25px;background:#443a3a;text-align:center;color:#ffffff;}
 
 /* RESPONSIVE */
 @media(max-width:768px){nav{padding:15px 30px;}#home h1{font-size:40px;}}
+
+
+/* HAMBURGER MENU */
+.hamburger{display:none;flex-direction:column;justify-content:space-between;width:30px;height:22px;cursor:pointer;z-index:100;}
+.hamburger span{display:block;width:100%;height:3px;background:#ffffff;border-radius:3px;transition:0.3s;}
+.hamburger.active span:nth-child(1){transform:translateY(9.5px) rotate(45deg);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:translateY(-9.5px) rotate(-45deg);}
+
+@media(max-width:1024px){
+.hamburger{display:flex;}
+nav ul{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:rgb(90, 83, 83);flex-direction:column;justify-content:center;align-items:center;gap:25px;transition:0.4s ease;border-left:1px solid #000;box-shadow:-5px 0 15px rgba(0,0,0,0.3);}
+nav ul.active{right:0;}
+nav ul li a{font-size:18px;}
+}
 </style>
 </head>
 <body>
@@ -96,14 +111,20 @@ footer{padding:25px;background:#000;text-align:center;color:#05eeff;}
   <img src="logo1.svg" alt="Logo Nisa" style="width:40px; height:40px;">
 </div>
 
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#certification">Certification</a></li>
-<li><a href="#activity">Activity</a></li>
-<li><a href="#sosmed">Sosmed</a></li>
-<li><a href="#contact">Contact</a></li>
+<div class="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<ul id="navMenu">
+<li><a href="#home" onclick="closeMenu()">Home</a></li>
+<li><a href="#about" onclick="closeMenu()">About</a></li>
+<li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+<li><a href="#certification" onclick="closeMenu()">Certification</a></li>
+<li><a href="#activity" onclick="closeMenu()">Activity</a></li>
+<li><a href="#sosmed" onclick="closeMenu()">Sosmed</a></li>
+<li><a href="#contact" onclick="closeMenu()">Contact</a></li>
 </ul>
 </nav>
 
@@ -238,6 +259,22 @@ document.addEventListener("DOMContentLoaded", function(){
    closeBtn.addEventListener("click", ()=>{popup.style.display="none";});
    popup.addEventListener("click",(e)=>{if(e.target===popup){popup.style.display="none";}});
 });
+</script>
+
+<script>
+function toggleMenu(){
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+}
+
+function closeMenu(){
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+}
 </script>
 
 </body>
